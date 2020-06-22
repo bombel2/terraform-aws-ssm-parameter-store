@@ -13,5 +13,5 @@ resource "aws_ssm_parameter" "_" {
   description     = lookup(each.value, "description", null)
   tier            = lookup(each.value, "tier", "Standard")
   allowed_pattern = lookup(each.value, "allowed_pattern", null)
-  overwrite       = lookup(each.value, "overwrite", false)
+  overwrite       = lookup(each.value, "overwrite", true)
 }
